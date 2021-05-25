@@ -4,7 +4,7 @@
 
 - [Command Line Options](guides/Command_Line.md)
 - [Native Rendering](guides/Native_Rendering.md)
-- [Understanding Keys](guides/Running_the_Examples.md)
+- [Understanding Keys](guides/Understanding_Keys.md)
 - [Node/NPM Compatibility](guides/Nodejs_Compatibility.md)
 
 ## Reference
