@@ -1,0 +1,14 @@
+{
+  "name": "Grains",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "elementary ."
+  },
+  "author": "Nick Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "@nick-thompson/elementary": "^0.1.9"
+  }
+}
