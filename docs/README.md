@@ -26,15 +26,21 @@ to help you construct your audio signal chain.
 
 ## Examples
 
-Inside the `npm` package you'll also find a small set of example projects at `./node_modules/@nick-thompson/elementary/examples`. Each
-one can be invoked as its own npm package, for example:
+In the [GitHub repository](https://github.com/nick-thompson/elementary) you'll find a small set of example projects aiming to provide
+a brief introduction to various functionality. Each example can be invoked on its own:
 
 ```bash
-$ npx elementary ./node_modules/@nick-thompson/elementary/examples/fm/
+$ cd examples/00_HelloSine
+$ npm install
+$ npm start
 ```
 
 And of course you can open these example files, poke around, and edit as you like!
 
 ## Licensing
 
-Elementary is dual licensed under either the AGPLv3, or a commercial license, at your choosing. Please refer to the [full license text linked here](https://www.gnu.org/licenses/agpl-3.0.html) or contact us about a commercial license.
+The Elementary library available on `npm` and the command line application provided therein may be used under the terms of the AGPLv3, or a
+commercial license, at your choosing. Please refer to the [full license text](https://github.com/nick-thompson/elementary/blob/6bd2ad18946e9b784e70642ac775f4e3b5ce727c/LICENSE.md) or [contact us](https://www.elementary.audio/embed#contact-section) about a commercial license.
+
+If you're interested in embedding or extending the Elementary runtime, there is an additional Embedded Runtime SDK available under a commercial license.
+For more information, please get in contact!
