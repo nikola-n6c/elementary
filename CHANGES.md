@@ -5,6 +5,7 @@
 Jun 1, 2021
 
 * Added Linux support
+* Fully enumerated midi event objects
 * Fixed a crash with `el.in()` when inputs not supplied
 * Fixed builtin graph nodes to output 0 on realtime error
 
