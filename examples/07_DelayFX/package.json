@@ -1,0 +1,14 @@
+{
+  "name": "DelayFX",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "elementary -i 2 -o 2 ."
+  },
+  "author": "Nick Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "@nick-thompson/elementary": "^0.2.0"
+  }
+}
