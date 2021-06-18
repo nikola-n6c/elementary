@@ -1,5 +1,13 @@
 # Changes
 
+## v0.2.1
+
+Jun 18, 2021
+
+* Multiple runtime instances per thread fix
+* Introduce support for composite nodes and memoization at the javascript layer
+* Refactor the js library according to the new composite node api
+
 ## v0.2.0
 
 Jun 1, 2021
