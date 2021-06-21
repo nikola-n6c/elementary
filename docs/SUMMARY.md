@@ -3,6 +3,7 @@
 ## Guides
 
 - [Command Line Options](guides/Command_Line.md)
+- [Making Sound 101](guides/Making_Sound.md)
 - [Native Rendering](guides/Native_Rendering.md)
 - [Understanding Keys](guides/Understanding_Keys.md)
 - [Writing Reusable Components](guides/Writing_Reusable_Components.md)
