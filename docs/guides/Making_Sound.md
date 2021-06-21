@@ -86,7 +86,8 @@ instead of using `Math.sin` or the `*` operator we're using the builtin Elementa
 `el.mul`. The reason for these operators is that we don't actually want to compute a discrete sine value here
 for some discrete input `t`: we want to describe a representation of a continuous function which outputs
 a sine tone over time. Working in the language of Elementary's builtin operators (like `el.sin` and `el.mul`)
-lets us do exactly that.
+lets us do exactly that, and this description of our signal process is exactly what Elementary will ultimately
+render for you within the realtime audio processing thread.
 
 But wait, why have we written `2 * Math.PI` here then, instead of `el.mul(2, Math.PI)`. If you alraedy noticed that,
 good catch! Indeed, writing `el.mul(2, Math.PI)` is perfectly valid. Here it's helpful to explain how Elementary views
@@ -97,8 +98,9 @@ is, again, time, and whose output is always the value `2`. That means that writi
 three functions: `f(x) = 2`, `g(x) = 3.14159...`, and a third composite function, `h(x) = f(x) * g(x)`. Elementary will happily
 go ahead with that for you, but note that writing `el.mul(2 * Math.PI, t)` evaluates first to the expression `el.mul(6.28318.., t)`.
 Therefore, instead of `h(x) = f(x) * g(x)` describing three functions, we simply have `h(x) = 6.28318`. This simple trick
-is helpful to keep in mind as you write more and more complicated Elementary applications, because it lets you compute ahead of time
-constant values that might otherwise be reduntant to _actually_ compute continously at audio rate.
+is helpful to keep in mind as you write more and more complicated Elementary applications, because it lets you compute constant values
+ahead of time that might otherwise be reduntant to actually compute continuously at audio rate (Elementary can and often will
+find and perform simple optimizations like this for you, but being explicit never hurts).
 
 Ok, backing up: we've got our `sineTone` function, and we know that we want to use a `phasor` to represent time. What
 will this look like?

@@ -9,7 +9,8 @@ Watch the [intro video](https://www.youtube.com/watch?v=AvCdrflFHu8) for the ful
 
 ## Installation
 
-**This project is currently pre-beta and macOS/Linux only. Installing and running on other platforms will not work.**
+**This project is beta status, and supports macOS/Linux only. Installing and running on other platforms will not work.**
+**Support for other platforms, notably Windows, is planned for the near future.**
 
 ```bash
 $ npm install @nick-thompson/elementary
