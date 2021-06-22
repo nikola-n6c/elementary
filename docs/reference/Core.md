@@ -37,16 +37,53 @@ the runtime will be listening to any such device, which may yield frequent MIDI 
 The `'midi'` event is fired with a single argument: an object describing the event.
 
 ```js
+// A noteOn event
 {
-  type: 'noteOn',
-  noteNumber: 60,
-  noteName: 'C4',
-  noteFrequency: 620.391
+  bytes: '90456a',
+  noteFrequency: 440,
+  noteName: 'A3',
+  noteNumber: 69,
+  source: 'Moog Grandmother',
+  type: 'noteOn'
+}
+
+// A noteOff event
+{
+  bytes: '80456a',
+  noteFrequency: 440,
+  noteName: 'A3',
+  noteNumber: 69,
+  source: 'Moog Grandmother',
+  type: 'noteOff'
+}
+
+// A controller event
+{
+  bytes: 'b0082d',
+  channel: 1,
+  source: 'Moog Grandmother',
+  target: 8,
+  type: 'controller',
+  value: 45
 }
 ```
 
-Note: Not all MIDI events are enumerated correctly at this stage of the beta. This section will be expanded on as
-broader MIDI event support rolls out.
+Note: all MIDI events are enumerated with at least a `source`, `type`, and `bytes` property. Events for which
+the runtime could not derive a helpful type will show `type: "raw"`. The `bytes` property is a hexidecimal string
+containing the raw MIDI payload for further deserialization in such cases.
+
+Supported events:
+- NoteOn
+- NoteOff
+- ProgramChange
+- PitchWheel
+- Aftertouch
+- ChannelPressure
+- AllNotesOff
+- AllSoundOff
+- MetaEvent
+- Controller
+- Raw
 
 #### 'tick'
 
